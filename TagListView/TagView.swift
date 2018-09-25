@@ -61,12 +61,12 @@ open class TagView: UIButton {
     private var imagePaddingX: CGFloat {
         // If both the image and TagView are rounded, left indent by the border width so image snugly fits on left side of TagView
         // If not, indent by half paddingX - full paddingX w/ text looks unbalanced.
-        return hasOvalShape ? borderWidth : (paddingX / 2)
+        return hasOvalShape ? borderWidth : (paddingX)
     }
     private var imagePaddingY: CGFloat {
         // If both image and TagView are rounded, image should fit snugly into corner.
         // If not, image should still be larger than text - use half the padding .
-        return hasOvalShape ? borderWidth : (paddingY / 2) + borderWidth
+        return hasOvalShape ? borderWidth : (paddingY) + borderWidth
     }
     
     private var imageWidth: CGFloat {
